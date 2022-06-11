@@ -1,0 +1,108 @@
+header{
+    background-color: #cccccc;
+    padding: 20px 0; /*20px é em relação a vertical e 0 em relação a horizontal*/
+}
+
+.caixa{
+    width: 940px;
+    position: relative;
+    margin: 0 auto; /*auto significa que delegamos para o navegador fazer a conta de calcular a largura que resta, dividir por dois, e adicionar metade em cada um dos lados.*/
+}
+
+nav{
+    position: absolute; /*temos três tipos de posição: position static é a posição original que o elemento se encontra na página; position relative é a posição do elemento na página em relação a sua posição original, porém seu conteúdo fica num plano na frente da página; position absolut é um posicionamento absoluto em relação ao elemento que o contém, dessa forma ele se desprende totalmente ficando no plano da frente e livre para se posicionar nesse elemento*/
+    top: 110px;
+    right: 0px;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+    transition: 0.5s; /*faz uma transição suave do efeito hover*/
+}
+
+nav a:hover{ /*a propriedade hover faz um elemento da página se destacar quando a seta do mouse está nele*/
+    color: brown;
+    font-size: 25px;
+}
+
+#banner{
+    width: 100%;
+}
+
+.principal{
+    background-color: #ffffff;
+    padding: 70px 50px 0 50px;
+}
+
+.titulo_centralizado{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+p{
+    text-align: center;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+#missao{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+em strong{
+    color: brown;
+}
+
+.beneficios{
+    background-color: #ffffff;
+    box-sizing: border-box;
+    width: 940px;
+    padding: 70px 0 80px 0;
+    margin: 0 auto; /*auto significa que delegamos para o navegador fazer a conta de calcular a largura que resta, dividir por dois, e adicionar metade em cada um dos lados.*/
+}
+
+.beneficios h2{
+    margin-bottom: 35px;
+}
+
+/*um display block ocupa toda uma linha (não permite que outro elemento fique ao lado dele numa página). Um display inline permite que outro elemento fique ao lado dele mas não permite que seja ajustado o espaçamento externo e interno dele.*/
+.topicos{
+    display: inline-block;  /*Um display inline-block só ocupa o tamanho do conteúdo (outro elemento pode ficar ao lado dele), mas permite definir o tamanho da sua largura  e dos seus espaçamentos interno e externo*/  
+    vertical-align: top;
+    width: 35%;
+    margin-right: 5%;
+    line-height: 60px;
+}
+
+.itens{
+    font-size: 28px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.imagemBeneficios{
+    width: 50%;
+}
+
+footer{
+    background: url("bg.jpg"); /*adicionamos uma imagem de fundo em um elemento*/
+    text-align: center;
+    padding: 30px 0;
+}
+
+.copyright{
+    color: #ffffff;
+    font-size: 13px;
+}

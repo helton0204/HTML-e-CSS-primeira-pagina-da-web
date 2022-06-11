@@ -1,0 +1,89 @@
+<!DOCTYPE html> <!--essa tag informa qual é a versão do arquivo html-->
+<html lang="pt-br"> <!--todo código do site a ser renderizado fica entre as tags html. lang="pt-br" informa qual o idioma desse arquivo html-->
+    <head> <!--toda informação que é passada para o navegadir fica entre as tags head-->
+        <meta charset="UTF-8">  <!-- essa tag carrega o conjunto de caracteres fazendo com que o usuário, de qualquer país, veja a página com o dicionário coreto -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- link para fonte externa do google fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Roboto+Flex:opsz,wght@8..144,300&display=swap" rel="stylesheet">
+        <title>Barbearia ALura</title>
+    </head>
+    <body> <!--toda informação a ser exibida ná página fica no body-->
+        <header>
+            <div class="caixa">
+                <a href="index.html" class="caixa__logo">
+                    <img src="logo.png" alt="Logo da Barbearia Alura"> <!-- alt="" descreve a imagem em questão, facilitando a leitura de deficientes visuais -->
+                </a> 
+                
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <img class="banner" src="banner.jpg">
+
+        <main>
+            <section class="principal"> <!-- a tag section envolve um bloco onde o conteúdo tenha o mesmo significado, o mesmo sentido (mesma semântica) -->
+                <h2 class="titulo_principal">Sobre a Barbearia Alura</h2> 
+                
+                <img class="utensilios" src="utensilios.jpg" alt="Utensilios de barbeiro">
+
+                <p>Localizada no coração da cidade a <strong>Barbearia Alura</strong> traz para o mercado o que há de melhor para o seu cabelo e barba. 
+                Fundada em 2019, a Barbearia Alura já é destaque na cidade e conquista novos clientes a cada dia.</p> 
+    
+                <p id="missao"><em>Nossa missão é: <strong>"Proporcionar auto-estima e qualidade de vida aos clientes".</strong></em></p> 
+    
+                <p>Oferecemos profissionais experientes e antenados às mudanças no mundo da moda. O atendimento possui padrão de 
+                excelência e agilidade, garantindo qualidade e satisfação dos nossos clientes.</p>
+            </section>
+
+            <section class="mapa">
+                <h3 class="titulo_principal">Nosso estabelecimento</h3>
+                <p>O nosso estabelecimento está localizado no coração da cidade.</p> <!--Abaixo está o mapa compartilhado pelo google maps-->
+                <div class="mapa_conteudo">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.286441991527!2d-35.21624788465141!3d-5.8151621589687785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b2fff7c514eddd%3A0x9ab9767e47aa61d5!2sR.%20Piloto%20Gileno%20Melo%2C%201881%20-%20Lagoa%20Nova%2C%20Natal%20-%20RN%2C%2059054-760!5e0!3m2!1spt-BR!2sbr!4v1653399904218!5m2!1spt-BR!2sbr" 
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
+    
+            <section class="beneficios">
+                <h2 class="titulo_principal">Benefícios</h2>
+                
+                <div class="conteudo_beneficios">
+                    <ul class="lista_beneficios">
+                        <li class="itens">Atendimento aos clientes</li>
+                        <li class="itens">Espaço diferenciado</li>
+                        <li class="itens">Localização</li>
+                        <li class="itens">Profissionais qualificados</li>
+                        <li class="itens">Ótimos preços</li>
+                        <li class="itens">Pontualidade</li>
+                        <li class="itens">Limpeza</li>
+                    </ul><img class="imagem_beneficios" src="beneficios.jpg"> <!--observe que a lista ul está colada com a imagem img. Isso é necessário pq a propriedade display inline-block quando deixa dois elementos um ao lado do outro, ocupando 100% da tela, não pode conter nenhuma espaço ou quebra de linha do html desses elementos-->
+                </div>
+
+                <div class="video">
+                    <iframe width="100%" height="400" src="https://www.youtube.com/embed/wcVVXUV0YUY" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <img src="logo-branco.png" alt="Logo da Barbearia Alura">
+            <p class="copyright">&copy; Copyright Barbearia Alura - 2022</p>
+        </footer>
+
+    </body>
+</html>

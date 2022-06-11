@@ -1,0 +1,365 @@
+
+/*
+Seletores avançados em CSS:
+main > p{ } - seleciona todas as tags p que são filhas diretas da tag main.
+main img + p{ } - seleciona o primeiro irmão depois da img.
+main img ~ p{ } - seleciona todas as tags p que vem depois da img.
+.principal p:not(#missao) { } - seleciona todos o parágrafos menos o parágrafo do id missao.
+
+Medidas proporcionais:
+width: calc( (100% / 3) - 10px ) - é uma forma de fazer um cálculo ajustado do tamanho de um determinado elemento. Nesse exemplo temos a largura de um terço de 100% elemento menos 10px.
+*/
+
+body{
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+/*HEADER*/
+
+header{
+    background-color: #cccccc;
+    padding: 20px 0; /*20px é em relação a vertical e 0 em relação a horizontal*/
+}
+
+.caixa{ /*ATENÇÃO: em relação a borescrita de elementos no css, a força de um id é maior do que de uma class que por sua vez é maior do que a força de uma tag, dessa forma, um elemento que tem menor força não consegue sobrescrever um de maior força*/
+    width: 940px;
+    position: relative;
+    margin: 0 auto; /*auto significa que delegamos para o navegador fazer a conta de calcular a largura que resta, dividir por dois, e adicionar metade em cada um dos lados.*/
+}
+
+nav{
+    position: absolute; /*temos três tipos de posição: position static é a posição original que o elemento se encontra na página; position relative é a posição do elemento na página em relação a sua posição original, porém seu conteúdo fica num plano na frente da página; position absolut é um posicionamento absoluto em relação ao elemento que o contém, dessa forma ele se desprende totalmente ficando no plano da frente e livre para se posicionar nesse elemento*/
+    top: 110px;
+    right: 0px;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    font-family: 'Bree Serif', serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+    transition: 0.5s all; /*faz uma transição suave do efeito hover*/
+}
+
+nav a:hover{ /*a propriedade hover faz um elemento da página se destacar quando a seta do mouse está nele*/
+    color: brown;
+    font-size: 25px;
+}
+
+/*PÁGINA DE PRODUTOS*/
+
+.produtos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.produtos li{
+    display: inline-block; /*deixa o conteúdo com o seu tamanho original, mas o tamanho pode ser ajustado, tanto na largura, quanto na altura*/
+    text-align: center;
+    box-sizing: border-box; /*essa propriedade faz o tamanho do espaçamento interno (padding) do elemento não somar com sua largura (width) garantindo que sua largura seja definida pelo width*/
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    border: 3px solid #000000;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.produtos li:hover{
+    border-color: orange;
+    cursor: pointer;
+}
+
+.produtos li:active{ /*a propriedade active faz um elemento da página se destacar quando o click do mouse for precionado nele*/
+    border-color: brown;
+}
+
+.produtos li:hover h2{ /*quando mouse estiver em cima do elemento li da classe produtos, o elemento h2 vai aumentar sua fonte*/
+    font-size: 34px;
+}
+
+.produtos h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.produto_descricao{
+    font-size: 18px;
+}
+
+.produto_preco{
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/*FOOTER*/
+
+footer{
+    background: url("bg.jpg"); /*adicionamos uma imagem de fundo em um elemento*/
+    text-align: center;
+    padding: 30px 0;
+}
+
+.copyright{
+    color: #ffffff;
+    font-size: 13px;
+}
+
+/*PÁGINA DE CONTATO*/
+
+form{
+    width: 940px;
+    margin: 40px auto;
+}
+
+form label, form legend{ /* o uso da vírgula separando tags faz com que o mesmo estilo seja aplicado nessas tags */
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.input_padrao{
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox{
+    margin: 20px 0;
+}
+
+.enviar{
+    width: 40%;
+    padding: 15px 0;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    transition: 0.5s all; /*faz uma transição suave do efeito hover*/
+    cursor: pointer; /*a seta do mouse se transforma em uma mão sempre que estiver em cima do botão enviar */;
+}
+
+.enviar:hover{
+    background-color: brown;
+    transform: scale(1.03); /*Faz o elemento aumentar proporcionalmente quando o mouse está em cima dele, nesse exemplo o aumento é de 3% (1.03)*/
+}
+
+table{
+    margin: 20px 0 40px 320px;
+}
+
+thead{
+    background-color: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td, th{
+    border: 1px solid black;
+    padding: 10px 15px;
+}
+
+/*PÁGINA HOME*/
+
+.banner{
+    width: 100%;
+}
+
+main p{
+    font-size: 22px;
+}
+
+.principal{
+    padding: 5.5em 0 0 0;
+    background-color: #FEFEFE;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.titulo_principal{
+    font-family: 'Bree Serif', serif;
+    text-align: center;
+    font-size: 2em; /*em é uma medida proporcional, 2em significa que a fonte tem 2 vezes o tamanho do texto*/
+    margin: 0 0 2em;
+    clear: left; /*limpa o efeito float*/
+}
+
+.principal p{
+    margin: 0 0 1em;
+    text-align: justify;
+}
+
+.principal strong{
+    font-weight: bold;
+}
+
+.principal em{
+    font-style: italic;
+}
+
+.utensilios{
+    width: 120px;
+    float: left; /*float cria uma flutuação no elemento fazendo com que ele "levante" da página, ficando na frente dos outros elementos e sua sombra fique no mesmo plano desses elementos, dessa forma esses elementos não ocupam o espaço do elemento com efeito float. Atenção: o float altera toda a estrutura da página, o seu efeito precisa ser limpados pelos elementos afetado, quem faz essa limpeza e o clear*/
+    margin: 0 20px 20px 0;
+}
+
+.mapa{
+    padding: 3em 0; /*em é uma medida proporcional ao tamanho da fonte do site*/
+    background: linear-gradient(#ffffff, #cccccc); /*gera um efeito gradiente com diversas possibilidades*/
+}
+
+.mapa_conteudo{
+    width: 940px;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+.mapa_conteudo:hover{
+    box-shadow: 0 0 12px 4px rgb(0, 0, 0, 0.5);
+}
+
+.mapa p{
+    text-align: center;
+    margin: 0 0 2em;
+}
+
+.beneficios{
+    padding: 3em 0;
+    background-color: #cccccc;
+}
+
+.conteudo_beneficios{
+    width: 920px;
+    margin: 0 auto;
+}
+
+.lista_beneficios{
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.itens{
+    line-height: 1.1em;
+    font-size: 23px;
+    line-height: 50px;
+    transition: 0.2s;
+}
+
+.itens:hover{
+    color: goldenrod;
+    font-weight: bold;
+}
+
+.itens:before{ /*Quando queremos criar um elemento na página, via CSS, antes do elemento do HTML, usamos a propriedade :before*/
+    content: "★ ";
+}
+
+.itens:first-child{ /*first-child seleciona o primeiro elemento filho de uma hierarquia, last-child seleciona o último e o nth-child(x) seleciona o elemento x dessa hierarquia */
+    font-weight: bold;
+}
+
+.imagem_beneficios{
+    width: 60%;
+    box-shadow: 6px 6px 10px 4px rgb(0, 0, 0, 0.5);
+}
+
+.video{
+    width: 760px;
+    margin: 2.5em auto; /*deixa o video centralizado nas laterais*/
+}
+
+/*ESTILO PARA SMARTPHONES*/
+
+@media screen and (max-width: 480px){ /*É dentro dessa media query que criamos um estilo visual que compreenda telas de até 480px.*/
+    
+    /*PÁGINA HOME*/
+
+    .caixa, .principal, .conteudo_beneficios, .mapa, .mapa_conteudo, .video{
+        width: auto;
+    }
+
+    .caixa h1 img{
+        width: 30%;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    nav{
+        position: static;
+        text-align: center;
+    }
+
+    nav ul li:first-child{
+        margin-left: 0;
+    }
+
+    .principal{
+        padding: 1.5em 1em 0 1em;
+        background: #cccccc, #ffffff);
+    }
+
+    .titulo_principal{
+        margin-bottom: 0.5em;
+    }
+
+    .mapa{
+        padding: 1em 0.5em 0 0.5em;
+    }
+
+    .mapa p{
+        margin: 0 0 1em;
+    }
+
+    .beneficios{
+        padding: 2em 0 0.5em 0;
+    }
+
+    .lista_beneficios{
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .itens{
+        line-height: 40px;
+    }
+
+    .imagem_beneficios{
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 20px;
+        box-shadow: 5px 5px 8px rgb(0, 0, 0, 0.5);
+    }
+    
+    .video{
+        width: 90%;
+    }
+
+    footer{
+        padding: 0.5em 0;
+    }
+
+    footer img{
+        width: 20%;
+    }
+}
+

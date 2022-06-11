@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <title>Contato</title>
+</head>
+<body>
+    <header>
+        <div class="caixa">
+            <a href="index.html" class="caixa__logo">
+                <img src="logo.png" alt="Logo da Barbearia Alura"> <!-- alt="" descreve a imagem em questão, facilitando a leitura de deficientes visuais -->
+            </a> 
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <form action="">
+            <label for="nome_sobrenome">Nome e sobrenome</label> <!-- em label e input os nomes para for e id são sempre iguais porque, dessa forma, aumenta a área de contato para acessar o input -->
+            <input type="text" required id="nome_sobrenome" class="input_padrao"> <!-- type="text" é porque ao acessar pelo celular aparece um teclado mais favorável para texto. required torna obrigatório a entrada de dados nesse campo -->
+
+            <label for="email">Email</label>
+            <input type="email" required id="email" class="input_padrao" placeholder="seuemail@dominio.com"> <!-- placeholder deixa o input com uma sugestão de como o dado deve ser digitado -->
+
+            <label for="telefone">Telefone</label> <!--  -->
+            <input type="tel" required id="telefone" class="input_padrao" placeholder="(xx) xxxx-xxxx">
+
+            <label for="mensagem">Mensagem</label>
+            <textarea name="" required id="mensagem" cols="30" rows="10" class="input_padrao"></textarea> <!-- textarea é um campo destinado a receber um texto como entrada de dados -->
+            
+            <fieldset> <!-- fieldset é uma tag para envolver campos que tratam de um assunto específico Ex: dados de um cartão de crédito-->
+                <legend>Como prefere o nosso contato?</legend> <!-- A tag legend é responsável por receber um título de um fieldset -->
+                <label for="radio_email"><input type="radio" name="contato" value="email" id="radio_email">Email</label> <!-- input type="radio" é um círculo para ser clicado como uma opção. Observe que todos os inputs do tipo radio tem os mesmos name="contato", isso é para as opções de escolha ser apenas uma dos inputs radio -->
+
+                <label for="radio_telefone"><input type="radio" name="contato" value="telefone" id="radio_telefone">Telefone</label> <!-- o botão de input dentro do label faz com que o botão apareça antes do label -->
+                
+                <label for="radio_whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio_whatsapp" checked>WhatsApp</label> <!-- checked deixa o campo preenchido previamente -->
+            </fieldset>
+
+            <fieldset>
+                <legend>Qual horário prefere ser atendido?</legend>
+                <select name="" id="">
+                    <option value="">Manhã</option>
+                    <option value="">Tarde</option>
+                    <option value="">Noite</option>
+                </select>
+            </fieldset>
+
+            <label for="input_checkbox" class="checkbox"><input type="checkbox" id="input_checkbox" checked>Gostaria de receber nossas novidade por e-mail?</label>
+            
+
+            <input type="submit" value="Enviar dados" class="enviar">
+        </form>
+
+        <table> <!-- table é uma tag para criar uma tabela -->
+            <thead> <!-- thead é a tag que guarda o cabeçalho da tabela -->
+                <tr> <!-- as tags tr são as linhas da tabela -->
+                    <th>Dia</th> <!-- as tags th são as colunas do cabeçalho da tabela  -->
+                    <th>Horário</th> <!-- As tabelas também nos oferecem a possibilidade de juntar células (colunas), esse efeito é conseguido através da propriedade colspan=X, onde X é o número de células que você quer agrupar -->
+                </tr>
+            </thead>
+            <tbody> <!-- tbody é o corpo da tabela -->
+                <tr>
+                    <td>Segunda</td> <!-- as tags td são as colunas da tabela -->
+                    <td>8h-20h</td>
+                </tr>
+                <tr>
+                    <td>Quarta</td>
+                    <td>8h-20h</td>
+                </tr>
+                <tr>
+                    <td>Sexta</td>
+                    <td>8h-20h</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <img src="logo-branco.png" alt="Logo da Barbearia Alura">
+        <p class="copyright">&copy; Copyright Barbearia Alura - 2022</p>
+    </footer>
+</body>
+</html>
